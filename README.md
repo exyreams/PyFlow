@@ -81,7 +81,7 @@ https://github.com/user-attachments/assets/72154a32-e3b1-444c-9963-7ddbfe575400
 
 **🎬 Configuration Video:**
 
-
+https://github.com/user-attachments/assets/4d7db7cb-2395-4c9e-89a2-50eacfbc926f
 
 ### ▶️ Running the Notebook
 1.  **Connect Runtime:** In Colab, ensure you are connected to a runtime (Runtime > Connect to runtime). A standard runtime is usually sufficient, but High-RAM is recommended for large block analyses.
@@ -102,10 +102,15 @@ The notebook is structured sequentially, exploring different RPC methods. Watch 
 ### 🛠️ Environment Setup: Installing Dependencies for PyFlow (Cell 1)
 Installs all required Python libraries. Run this first.
 
+https://github.com/user-attachments/assets/fab345cb-e8d7-4c7b-81ea-1f0f5905a443
+
 ### 🔑 Configuration & Authentication: Connecting to GCP and Ethereum RPC (Cell 2)
 
 >  [!WARNING]
-> Enter your **`GCP Project ID`** and **`RPC Endpoints`** here before running. Authenticates your session. Check the output summary for successful connections.
+> Enter your **`GCP Project ID`** and **`RPC Endpoints`** here before running. Authenticates your session. Check the output summary for successful connections. 
+
+https://github.com/user-attachments/assets/4d7db7cb-2395-4c9e-89a2-50eacfbc926f
+
 
 ### Analysis Sections (1.1 - 1.11)
 Each section focuses on one or more related RPC methods. Follow the detailed markdown explanations *within the notebook* for guidance on each method's purpose, GCP value, PYUSD insights, workflow, and interpreting results.
