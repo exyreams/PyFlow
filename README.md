@@ -5,6 +5,11 @@
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/exyreams/PyFlow/blob/main/PyFlow.ipynb)
 
+## Demos:
+For the full analytics demo, see the notebook and YouTube link below. Short demos are available in their respective sections. 
+* **PyFlow Demo with Output: [PyFlow Notebook Demo](https://colab.research.google.com/drive/1xhCC7E58sudkgdfQhtxQOgB2WbGI0Mo_?usp=sharing).**
+* **Youtube Video Link: [Coming Soon]**
+
 >[!TIP]
 > **Click Badge to Open in Collab**
 
@@ -123,11 +128,17 @@ Go to Explorer [PYUSD Transactions](https://etherscan.io/token/0x6c3ea9036406852
 
 *  1.2 🔍 `debug_traceTransaction` - Deep Dive into Transaction Execution
    * 1.2.1 Using `callTracer`: Mapping Internal Calls, Gas & Events (Recommended)
-      *  *Demo:* [Demo Video Coming Soon...]
+   
+       [1.2.1 Using `callTracer`.webm](https://github.com/user-attachments/assets/77620202-a1d7-484a-8a5a-223f9472266c)
+
    * 1.2.2 Using `structLog` Tracer: Opcode-Level Execution Analysis (Use Cautiously)   
-      *  *Demo:* [Demo Video Coming Soon...]
+      
+       [1.2.2 Using `structLog` Tracer.webm](https://github.com/user-attachments/assets/e41b6104-77ed-44c9-a565-050933b79e22)
+
 *  **1.3 `eth_getLogs`:** Efficiently fetch PYUSD `Transfer` events.
-*  *Demo:* [Demo Video Coming Soon...]
+
+   [1.3 `eth_getLogs`.webm](https://github.com/user-attachments/assets/1f7d114a-2f87-4b21-b658-e97833d76ddd)
+
 *  **1.4 `eth_getCode`:** Analyze contract bytecode (PYUSD, from Tx, or Custom).
 *  *Demo:* [Demo Video Coming Soon...]
 *  **1.5 `trace_block`:** Summary trace of all transactions in a block.
