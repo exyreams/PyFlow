@@ -149,21 +149,22 @@ The notebook contains numerous Python functions for fetching data, parsing resul
 
 ## 📚 Additional Resources & Documentation
 Here are valuable resources related to GCP Web3 services, PYUSD, and Ethereum:
+
 **Google Cloud Platform:**
-*   **GCP Blockchain Node Engine:**
-    *   [Overview](https://cloud.google.com/blockchain-rpc/docs/overview)
-    *   [Quickstart Guide](https://cloud.google.com/blockchain-rpc/docs/quickstart)
-    *   [Ethereum API Methods](https://cloud.google.com/blockchain-rpc/docs/rpc-api)
-*   **GCP Crypto Public Datasets on BigQuery:**
-    *   [Overview & Discovery](https://cloud.google.com/application/web3/discover)
-    *   [BigQuery Crypto Public Datasets HOWTO](https://cloud.google.com/application/web3/discover/products/public-blockchain-datasets-available-in-bigquery)
-    *   [BigQuery Ethereum Dataset (Marketplace)](https://console.cloud.google.com/marketplace/product/bigquery-public-data/blockchain-analytics-ethereum-mainnet-us)
-*   **Other GCP Tools:**
-    *   [Ethereum Faucet (Sepolia & Holesky)](https://cloud.google.com/application/web3/faucet)
-    *   [Google AI Studio](https://aistudio.google.com/prompts/new_chat)
-    *   [Google Colaboratory](https://colab.google/)
-    *   [BigQuery Service](https://cloud.google.com/bigquery)
-    *   [Experimental: Real-time Ethereum Events via Pub/Sub](https://cloud.google.com/application/web3/discover/products/realtime-evm-blockchain-events-with-pubsub?e=48754805)
+   *   **GCP Blockchain Node Engine:**
+       *   [Overview](https://cloud.google.com/blockchain-rpc/docs/overview)
+       *   [Quickstart Guide](https://cloud.google.com/blockchain-rpc/docs/quickstart)
+       *   [Ethereum API Methods](https://cloud.google.com/blockchain-rpc/docs/rpc-api)
+   *   **GCP Crypto Public Datasets on BigQuery:**
+       *   [Overview & Discovery](https://cloud.google.com/application/web3/discover)
+       *   [BigQuery Crypto Public Datasets HOWTO](https://cloud.google.com/application/web3/discover/products/public-blockchain-datasets-available-in-bigquery)
+       *   [BigQuery Ethereum Dataset (Marketplace)](https://console.cloud.google.com/marketplace/product/bigquery-public-data/blockchain-analytics-ethereum-mainnet-us)
+   *   **Other GCP Tools:**
+       *   [Ethereum Faucet (Sepolia & Holesky)](https://cloud.google.com/application/web3/faucet)
+       *   [Google AI Studio](https://aistudio.google.com/prompts/new_chat)
+       *   [Google Colaboratory](https://colab.google/)
+       *   [BigQuery Service](https://cloud.google.com/bigquery)
+       *   [Experimental: Real-time Ethereum Events via Pub/Sub](https://cloud.google.com/application/web3/discover/products/realtime-evm-blockchain-events-with-pubsub?e=48754805)
 
 **PayPal USD (PYUSD):**
 *   [About PYUSD (PayPal Developer Blog)](https://developer.paypal.com/community/blog/pyusd-stablecoin/)
