@@ -71,7 +71,7 @@ Following these steps will allow you to run the PyFlow notebook successfully.
 
 **🎬 Setup Video:**
 
-https://github.com/user-attachments/assets/72154a32-e3b1-444c-9963-7ddbfe575400
+[Prerequisites.webm](https://github.com/user-attachments/assets/755a58e9-be6a-4a55-afe8-a977b88a31a2)
 
 ### 🔑 Configuration
 1.  **Open the Notebook:** Click the "Open In Colab" badge at the top of this README or directly open the `PyFlow.ipynb` file in Google Colaboratory.
@@ -81,7 +81,7 @@ https://github.com/user-attachments/assets/72154a32-e3b1-444c-9963-7ddbfe575400
 
 **🎬 Configuration Video:**
 
-https://github.com/user-attachments/assets/4d7db7cb-2395-4c9e-89a2-50eacfbc926f
+[Configuration_Authentication.webm](https://github.com/user-attachments/assets/8372ff05-62fa-497d-9144-79742f66e217)
 
 ### ▶️ Running the Notebook
 1.  **Connect Runtime:** In Colab, ensure you are connected to a runtime (Runtime > Connect to runtime). A standard runtime is usually sufficient, but High-RAM is recommended for large block analyses.
@@ -102,22 +102,30 @@ The notebook is structured sequentially, exploring different RPC methods. Watch 
 ### 🛠️ Environment Setup: Installing Dependencies for PyFlow (Cell 1)
 Installs all required Python libraries. Run this first.
 
-https://github.com/user-attachments/assets/fab345cb-e8d7-4c7b-81ea-1f0f5905a443
+[Environment Setup.webm](https://github.com/user-attachments/assets/cc4c6550-8995-4a6a-919e-ce05c80e38d2)
 
 ### 🔑 Configuration & Authentication: Connecting to GCP and Ethereum RPC (Cell 2)
 
 >  [!WARNING]
 > Enter your **`GCP Project ID`** and **`RPC Endpoints`** here before running. Authenticates your session. Check the output summary for successful connections. 
 
-https://github.com/user-attachments/assets/4d7db7cb-2395-4c9e-89a2-50eacfbc926f
+[Configuration_Authentication.webm](https://github.com/user-attachments/assets/8372ff05-62fa-497d-9144-79742f66e217)
 
 
 ### Analysis Sections (1.1 - 1.11)
 Each section focuses on one or more related RPC methods. Follow the detailed markdown explanations *within the notebook* for guidance on each method's purpose, GCP value, PYUSD insights, workflow, and interpreting results.
 
-*  **1.1 Targets & Helpers:** Define default Tx/Block targets and load utility functions. *(Modify targets here if desired)*.
-*  **1.2 `debug_traceTransaction`:** Deep execution trace.
-*  *Demo:* [Demo Video Coming Soon...]
+*  1.1 🎯 Analysis Targets & Utility Functions. 
+*(Modify targets here if desired)*.
+Go to Explorer [PYUSD Transactions](https://etherscan.io/token/0x6c3ea9036406852006290770bedfcaba0e23a0e8), choose a transaction hash and its block.
+
+   [1.1Analysis Targets & Utility Functions.webm](https://github.com/user-attachments/assets/cf830cca-17d8-4e10-bae8-cab98cd3805a)
+
+*  1.2 🔍 `debug_traceTransaction` - Deep Dive into Transaction Execution
+   * 1.2.1 Using `callTracer`: Mapping Internal Calls, Gas & Events (Recommended)
+      *  *Demo:* [Demo Video Coming Soon...]
+   * 1.2.2 Using `structLog` Tracer: Opcode-Level Execution Analysis (Use Cautiously)   
+      *  *Demo:* [Demo Video Coming Soon...]
 *  **1.3 `eth_getLogs`:** Efficiently fetch PYUSD `Transfer` events.
 *  *Demo:* [Demo Video Coming Soon...]
 *  **1.4 `eth_getCode`:** Analyze contract bytecode (PYUSD, from Tx, or Custom).
