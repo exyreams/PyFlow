@@ -65,30 +65,30 @@ Following these steps will allow you to run the PyFlow notebook successfully.
 1.  **Google Account:** Required for Google Colab and GCP access.
 2.  **Google Cloud Project:** A GCP project with billing enabled (required for API usage, though free quotas are generous). Create one [here](https://console.cloud.google.com/projectcreate).
 3.  **Enabled GCP APIs:** Ensure the following APIs are **enabled** in your GCP project:
-* Blockchain Node Engine API
+* Blockchain Node Engine API ([Enable Link](https://console.cloud.google.com/blockchain/rpc?referrer=search&invt=AbupKA))
 * Google Drive API ([Enable Link](https://console.cloud.google.com/apis/library/drive.googleapis.com))
 * Google Sheets API ([Enable Link](https://console.cloud.google.com/apis/library/sheets.googleapis.com))
-4.  **GCP Blockchain Node Engine Endpoint:** Create an Ethereum Mainnet endpoint (and optionally testnet endpoints) in the [GCP Blockchain Node Engine Console](https://console.cloud.google.com/blockchain/node-engine). **Copy the full HTTPS RPC URL, including the API key.**
 
->  [!TIP]
-> Watch the Setup video below for a visual walkthrough of prerequisites and configuration.
+**🎬 Setup Video:**
 
-  **Setup Video:** 🎬
-[Demo Video Coming Soon...]
+https://github.com/user-attachments/assets/72154a32-e3b1-444c-9963-7ddbfe575400
 
 ### 🔑 Configuration
 1.  **Open the Notebook:** Click the "Open In Colab" badge at the top of this README or directly open the `PyFlow.ipynb` file in Google Colaboratory.
-2.  **Edit Cell 2 (🔑 Configuration & Authentication):** This is the **only cell you need to manually edit**.
-*  **`GCP_PROJECT_ID`:** Replace `"YOUR_PROJECT_ID"` with your actual GCP Project ID string.
+2.  **Edit Cell 2 (🔑 Configuration & Authentication: Connecting to GCP and Ethereum RPC):** This is the **only cell you need to manually edit**.
 *  **`BLOCKCHAIN_RPC` Dictionary:** Replace the placeholder URLs with your **full** GCP RPC endpoint URLs (including `?key=...`) for `'mainnet'` and optionally `'holesky'` and `'sepolia'`.
-*  **(Optional) `ETHERSCAN_API_KEY`:** Replace the placeholder if you have an Etherscan API key.
+*  **`GCP_PROJECT_ID`:** Replace `"YOUR_PROJECT_ID"` with your actual GCP Project ID string.
+
+**🎬 Configuration Video:**
+
+
 
 ### ▶️ Running the Notebook
 1.  **Connect Runtime:** In Colab, ensure you are connected to a runtime (Runtime > Connect to runtime). A standard runtime is usually sufficient, but High-RAM is recommended for large block analyses.
 2.  **Run Setup Cells:**
-* Run **Cell 1 (🛠️ Environment Setup)** to install dependencies (takes 1-2 minutes).
-* Run **Cell 2 (🔑 Configuration & Authentication)**. You will be prompted to authenticate with your Google Account via a pop-up. Follow the instructions. Verify that the output shows successful connections (RPC, BigQuery).
-3.  **Run Analysis Cells:** Proceed through the notebook section by section (1.1 through 1.12).
+* Run **Cell 1 (🛠️ Environment Setup: Installing Dependencies for PyFlow)** to install dependencies (takes 1-2 minutes).
+* Run **Cell 2 (🔑 Configuration & Authentication: Connecting to GCP and Ethereum RPC)**. You will be prompted to authenticate with your Google Account via a pop-up. Follow the instructions. Verify that the output shows successful connections (RPC).
+3.  **Run Analysis Cells:** Proceed through the notebook section by section (1.1 through 1.11).
 *  **Modify Targets:** In Cell 1.1, you can change the default `TARGET_TX_HASH` and `TARGET_BLOCK_IDENTIFIER`.
 *  **Enable Expensive Calls:** Some cells (like `structLog`, `replay*`) have flags (`RUN_... = True/False`). Set them to `True` cautiously to run those analyses.
 *  **Use Interactive Widgets:** Some sections provide interactive widgets (dropdowns, text boxes, buttons) for filtering or changing inputs directly in the output.
@@ -99,10 +99,10 @@ The notebook is structured sequentially, exploring different RPC methods. Watch 
 >  [!TIP]
 > For a visual walkthrough of the setup and each analysis section below, please watch the **[Full PyFlow Demo on YouTube]([Demo Video Coming Soon...])**. Refer to this video if any specific demo links below aren't working or if you prefer a comprehensive overview.
 
-### Environment Setup (Cell 1)
+### 🛠️ Environment Setup: Installing Dependencies for PyFlow (Cell 1)
 Installs all required Python libraries. Run this first.
 
-### Configuration & Authentication (Cell 2)
+### 🔑 Configuration & Authentication: Connecting to GCP and Ethereum RPC (Cell 2)
 
 >  [!WARNING]
 > Enter your **`GCP Project ID`** and **`RPC Endpoints`** here before running. Authenticates your session. Check the output summary for successful connections.
