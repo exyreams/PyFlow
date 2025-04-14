@@ -23,8 +23,8 @@ For the full analytics demo, see the notebook and YouTube link below. Short demo
     *   [🔑 Configuration](#-configuration)
     *   [▶️ Running the Notebook](#️-running-the-notebook)
 *   [📖 Usage Guide & Demos 🎬](#-usage-guide--demos-)
-    *   [Environment Setup (Cell 1)](#environment-setup-cell-1)
-    *   [Configuration & Authentication (Cell 2)](#configuration--authentication-cell-2)
+    *   [Environment Setup (Cell 1)](#%EF%B8%8F-environment-setup-installing-dependencies-for-pyflow-cell-1)
+    *   [Configuration & Authentication (Cell 2)](#-configuration--authentication-connecting-to-gcp-and-ethereum-rpc-cell-2)
     *   [Analysis Sections (1.1 - 1.11)](#analysis-sections-11---111)
 *   [💻 Technical Details](#-technical-details)
     *   [Key Libraries 📚](#key-libraries-)
@@ -120,40 +120,53 @@ Installs all required Python libraries. Run this first.
 ### Analysis Sections (1.1 - 1.11)
 Each section focuses on one or more related RPC methods. Follow the detailed markdown explanations *within the notebook* for guidance on each method's purpose, GCP value, PYUSD insights, workflow, and interpreting results.
 
-*  1.1 🎯 Analysis Targets & Utility Functions. 
+*  **1.1 🎯 Analysis Targets & Utility Functions.** 
 *(Modify targets here if desired)*.
 Go to Explorer [PYUSD Transactions](https://etherscan.io/token/0x6c3ea9036406852006290770bedfcaba0e23a0e8), choose a transaction hash and its block.
 
    [1.1Analysis Targets & Utility Functions.webm](https://github.com/user-attachments/assets/cf830cca-17d8-4e10-bae8-cab98cd3805a)
 
-*  1.2 🔍 `debug_traceTransaction` - Deep Dive into Transaction Execution
-   * 1.2.1 Using `callTracer`: Mapping Internal Calls, Gas & Events (Recommended)
+*  **1.2 🔍 `debug_traceTransaction` - Deep Dive into Transaction Execution**
+   * **1.2.1 Using `callTracer`: Mapping Internal Calls, Gas & Events (Recommended)**
    
        [1.2.1 Using `callTracer`.webm](https://github.com/user-attachments/assets/77620202-a1d7-484a-8a5a-223f9472266c)
 
-   * 1.2.2 Using `structLog` Tracer: Opcode-Level Execution Analysis (Use Cautiously)   
+   * **1.2.2 Using `structLog` Tracer: Opcode-Level Execution Analysis (Use Cautiously)**  
       
        [1.2.2 Using `structLog` Tracer.webm](https://github.com/user-attachments/assets/e41b6104-77ed-44c9-a565-050933b79e22)
 
-*  **1.3 `eth_getLogs`:** Efficiently fetch PYUSD `Transfer` events.
+*  **1.3 📜 `eth_getLogs`: Efficiently Fetching PYUSD Events**
 
    [1.3 `eth_getLogs`.webm](https://github.com/user-attachments/assets/1f7d114a-2f87-4b21-b658-e97833d76ddd)
 
-*  **1.4 `eth_getCode`:** Analyze contract bytecode (PYUSD, from Tx, or Custom).
+*  **1.4 📄 `eth_getCode`: Fetching and Analyzing Contract Bytecode (PYUSD, from Tx, or Custom).**
+
+   [1.4  `eth_getCode`.webm](https://github.com/user-attachments/assets/9c01b640-8e9c-4d97-bcda-eed39881cea6)
+
+*  **1.5 🧱 `trace_block`: Analyzing All Transactions in a Block**
+
+   [1.5  `trace_block`.webm](https://github.com/user-attachments/assets/411faca9-707d-4c42-a688-5b8083e05043)
+
+*  **1.6 🧱 `debug_traceBlockByNumber` and `debug_traceBlockByHash`: Detailed Block Tracing**
+
+   [1.6  `debug_traceBlockByNumber` and `debug_traceBlockByHash`.webm](https://github.com/user-attachments/assets/52c0e837-89fe-4afd-aef5-98b0377b1046)
+
+*  **1.7 🧪 `debug_traceCall`, `eth.call`, `eth.estimate_gas`: Advanced Simulation of PYUSD Transactions**
+   *  Simulation Setup
+
+      [1.7 Simulation Setup.webm](https://github.com/user-attachments/assets/076bbfa6-28ca-4818-a65c-75cb6e27c7ba)
+
+   *  Running Simulation
+   
+      [1.7 Runing Simulation.webm](https://github.com/user-attachments/assets/57480044-9cba-4f13-beff-0841ec037eb5)
+
+*  **1.8 📑 `trace_transaction`: Alternative Transaction Trace Analysis**
 *  *Demo:* [Demo Video Coming Soon...]
-*  **1.5 `trace_block`:** Summary trace of all transactions in a block.
+*  **1.9 🔄 `trace_replayTransaction` and `trace_replayBlockTransactions`: State Replay Analysis (High Cost)**
 *  *Demo:* [Demo Video Coming Soon...]
-*  **1.6 `debug_traceBlockBy*`:** Detailed trace of all transactions in a block.
+*  **1.10 💾 `debug_storageRangeAt`: Inspecting Raw Contract Storage**
 *  *Demo:* [Demo Video Coming Soon...]
-*  **1.7 `debug_traceCall`, `eth.call`, `eth.estimate_gas`:** Advanced Simulation of PYUSD Transactions.
-*  *Demo:* [Demo Video Coming Soon...]
-*  **1.8 `trace_transaction`:** Alternative detailed transaction trace.
-*  *Demo:* [Demo Video Coming Soon...]
-*  **1.9 `trace_replay*`:** Re-execute transactions/blocks with state diffs (High Cost!).
-*  *Demo:* [Demo Video Coming Soon...]
-*  **1.10 `debug_storageRangeAt`:** Inspect raw contract storage slots.
-*  *Demo:* [Demo Video Coming Soon...]
-*  **1.11 `txpool_status`:** Analyze network congestion.
+*  **1.11 🏊 `txpool_status`: Monitoring Network Congestion**
 *  *Demo:* [Demo Video Coming Soon...]
 
 ## 💻 Technical Details
@@ -170,6 +183,68 @@ Go to Explorer [PYUSD Transactions](https://etherscan.io/token/0x6c3ea9036406852
 
 ### Analysis Functions ⚙️
 The notebook contains numerous Python functions for fetching data, parsing results, performing analysis (gas, flow, patterns), and generating visualizations. Key functions are documented within the code cells.
+
+## 📜 Conclusion
+
+**PyFlow** is a research-driven framework designed to make advanced analysis of the PYUSD stablecoin practical, scalable, and cost-effective. This repository demonstrates how high-fidelity blockchain introspection—traditionally resource-heavy and expensive—can be made accessible using **Google Cloud Platform’s Blockchain Node Engine**.
+
+### ⚡ Why GCP Matters
+Performing deep blockchain analysis requires access to high-cost RPC methods, often billed at **50x to 100x** multipliers on standard infrastructure. These include:
+-   `debug_traceTransaction` – Full EVM execution tracing
+-   `trace_replayTransaction` – State diffs for forensic auditing
+-   `eth_getLogs` – High-efficiency event filtering
+-   `debug_storageRangeAt` – Inspect on-chain storage directly
+-   `trace_block` / `debug_traceBlock*` – Block-level execution flows  
+-   `trace_call` – Transaction simulations and gas predictions   
+-   `txpool_status` – Mempool health checks
+**Google Cloud’s Blockchain Node Engine** offers generous free-tier access to these high-cost methods, removing the typical economic barriers and enabling **true deep-chain intelligence**.
+
+### 🔍 Capabilities Demonstrated in PyFlow
+This project applies GCP-powered tracing and state-inspection to analyze PYUSD using:
+1.  **Forensic Transaction Analysis** – Unpack internal transfers and EVM call traces   
+2.  **State Change Auditing** – View exact balance/allowance changes using `stateDiff`   
+3.  **Event Monitoring** – Track Transfers and Approvals efficiently with `eth_getLogs`   
+4.  **Smart Contract Debugging** – Inspect bytecode and live storage values    
+5.  **Gas and Outcome Simulation** – Predict transaction behavior before sending    
+6.  **Block Contextualization** – Understand how transactions interact at the block level 
+7.  **Network Visibility** – Assess network congestion and mempool status
+
+### 🚀 Impact for PYUSD & Beyond
+PyFlow showcases how advanced techniques once limited to enterprises or protocol teams can now be accessed by any researcher, developer, or auditor. With GCP's infrastructure:
+-   Analysts gain transparency into stablecoin mechanics    
+-   Developers can simulate and debug with confidence  
+-   Auditors and security teams can detect vulnerabilities and anomalies    
+-   Regulatory and compliance teams can track on-chain behavior with precision
+
+### 🔮 What’s Next
+PyFlow lays the groundwork for:
+-   📡 Real-time anomaly detection & alerting    
+-   🤖 ML-powered analytics (fraud detection, transaction clustering)
+-   📊 Dashboards & UIs (Streamlit or Plotly integrations)    
+-   🔗 Cross-chain extensions (when GCP supports more networks)
+-   🔐 Merkle proof verification with `eth_getProof` for cryptographic audit trails
+    
+### ✅ Summary
+
+**PyFlow + GCP Blockchain Node Engine** democratizes access to elite blockchain tooling. What was once expensive, complex, and inaccessible is now available to anyone aiming to understand the flow, behavior, and mechanics of assets like **PYUSD** at the deepest level.
+
+
+## 🤝 Contributing
+
+We welcome contributions to PyFlow! Please feel free to submit issues, feature requests, or pull requests.
+
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+## 🙏 Acknowledgements
+
+*  **Google Cloud Platform:** For providing the Blockchain Node Engine with generous free access to advanced RPC methods.
+*  **PayPal:** For creating the PYUSD stablecoin.
+*  **StackUp:** For hosting the bounty challenge.
+* Open-source libraries used in this project.
 
 ## 📚 Additional Resources & Documentation
 Here are valuable resources related to GCP Web3 services, PYUSD, and Ethereum:
@@ -204,22 +279,5 @@ Here are valuable resources related to GCP Web3 services, PYUSD, and Ethereum:
 
 *(Note: The links provided in the original hackathon brief were used to create this list.)*
 
-
-## 🤝 Contributing
-
-We welcome contributions to PyFlow! Please feel free to submit issues, feature requests, or pull requests.
-
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-
-## 🙏 Acknowledgements
-
-*  **Google Cloud Platform:** For providing the Blockchain Node Engine with generous free access to advanced RPC methods.
-*  **PayPal:** For creating the PYUSD stablecoin.
-*  **StackUp:** For hosting the bounty challenge.
-* Open-source libraries used in this project.
 ---
 PyFlow by **`@exyreams`** - Developed for the "Seamless Transactions, Infinite Possibilities" hackathon.
