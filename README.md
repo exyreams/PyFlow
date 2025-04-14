@@ -73,20 +73,18 @@ Following these steps will allow you to run the PyFlow notebook successfully.
 * Blockchain Node Engine API ([Enable Link](https://console.cloud.google.com/blockchain/rpc?referrer=search&invt=AbupKA))
 * Google Drive API ([Enable Link](https://console.cloud.google.com/apis/library/drive.googleapis.com))
 * Google Sheets API ([Enable Link](https://console.cloud.google.com/apis/library/sheets.googleapis.com))
+* **🎬 Setup Video:**
 
-**🎬 Setup Video:**
-
-[Prerequisites.webm](https://github.com/user-attachments/assets/755a58e9-be6a-4a55-afe8-a977b88a31a2)
+   [Prerequisites.webm](https://github.com/user-attachments/assets/755a58e9-be6a-4a55-afe8-a977b88a31a2)
 
 ### 🔑 Configuration
 1.  **Open the Notebook:** Click the "Open In Colab" badge at the top of this README or directly open the `PyFlow.ipynb` file in Google Colaboratory.
 2.  **Edit Cell 2 (🔑 Configuration & Authentication: Connecting to GCP and Ethereum RPC):** This is the **only cell you need to manually edit**.
 *  **`BLOCKCHAIN_RPC` Dictionary:** Replace the placeholder URLs with your **full** GCP RPC endpoint URLs (including `?key=...`) for `'mainnet'` and optionally `'holesky'` and `'sepolia'`.
 *  **`GCP_PROJECT_ID`:** Replace `"YOUR_PROJECT_ID"` with your actual GCP Project ID string.
+* **🎬 Configuration Video:**
 
-**🎬 Configuration Video:**
-
-[Configuration_Authentication.webm](https://github.com/user-attachments/assets/8372ff05-62fa-497d-9144-79742f66e217)
+   [Configuration_Authentication.webm](https://github.com/user-attachments/assets/8372ff05-62fa-497d-9144-79742f66e217)
 
 ### ▶️ Running the Notebook
 1.  **Connect Runtime:** In Colab, ensure you are connected to a runtime (Runtime > Connect to runtime). A standard runtime is usually sufficient, but High-RAM is recommended for large block analyses.
@@ -161,13 +159,20 @@ Go to Explorer [PYUSD Transactions](https://etherscan.io/token/0x6c3ea9036406852
       [1.7 Runing Simulation.webm](https://github.com/user-attachments/assets/57480044-9cba-4f13-beff-0841ec037eb5)
 
 *  **1.8 📑 `trace_transaction`: Alternative Transaction Trace Analysis**
-*  *Demo:* [Demo Video Coming Soon...]
+
+   [1.8 `trace_transaction`.webm](https://github.com/user-attachments/assets/3007086c-1f34-4ef9-8774-6db9c865f534)
+
 *  **1.9 🔄 `trace_replayTransaction` and `trace_replayBlockTransactions`: State Replay Analysis (High Cost)**
-*  *Demo:* [Demo Video Coming Soon...]
+
+   [1.9 `trace_replayTransaction` and `trace_replayBlockTransactions`.webm](https://github.com/user-attachments/assets/6f094292-a551-4243-b002-740182bfb74c)
+
 *  **1.10 💾 `debug_storageRangeAt`: Inspecting Raw Contract Storage**
-*  *Demo:* [Demo Video Coming Soon...]
+
+   [1.10 `debug_storageRangeAt`.webm](https://github.com/user-attachments/assets/867b1e9e-5b0c-47c2-b489-8e17150f0b3a)
+
 *  **1.11 🏊 `txpool_status`: Monitoring Network Congestion**
-*  *Demo:* [Demo Video Coming Soon...]
+
+   [1.11 `txpool_status`.webm](https://github.com/user-attachments/assets/3ce51c92-325b-492c-ac01-adcdc329ee76)
 
 ## 💻 Technical Details
 
