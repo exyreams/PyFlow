@@ -8,7 +8,7 @@
 ## Demos:
 For the full analytics demo, see the notebook and YouTube link below. Short demos are available in their respective sections. 
 * **PyFlow Demo with Output: [PyFlow Notebook Demo](https://colab.research.google.com/drive/1bhVV8DX9ojp_3rq47KhCs-5Ez9fRA4kh?usp=sharing).**
-* **Youtube Video Link: [PyFlow Video Demo](https://youtu.be/61sq-Wcy0to)**
+* **Youtube Video Link: [PyFlow Video Demo](https://youtu.be/61sq-Wcy0to).**
 
 >[!TIP]
 > **Click Badge to Open in Collab**
@@ -105,7 +105,7 @@ Following these steps will allow you to run the PyFlow notebook successfully.
 The notebook is structured sequentially, exploring different RPC methods. Watch the demo videos for each section to see it in action.
 
 >  [!TIP]
-> For a visual walkthrough of the setup and each analysis section below, please watch the **[Full PyFlow Demo on YouTube]([Demo Video Coming Soon...])**. Refer to this video if any specific demo links below aren't working or if you prefer a comprehensive overview.
+> For a visual walkthrough of the setup and each analysis section below, please watch the **[PyFlow Video Demo](https://youtu.be/61sq-Wcy0to)**. Refer to this video if any specific demo links below aren't working or if you prefer a comprehensive overview.
 
 ### 🛠️ Environment Setup: Installing Dependencies for PyFlow (Cell 1)
 Installs all required Python libraries. Run this first.
