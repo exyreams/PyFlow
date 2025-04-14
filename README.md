@@ -7,8 +7,8 @@
 
 ## Demos:
 For the full analytics demo, see the notebook and YouTube link below. Short demos are available in their respective sections. 
-* **PyFlow Demo with Output: [PyFlow Notebook Demo](https://colab.research.google.com/drive/1xhCC7E58sudkgdfQhtxQOgB2WbGI0Mo_?usp=sharing).**
-* **Youtube Video Link: [Coming Soon]**
+* **PyFlow Demo with Output: [PyFlow Notebook Demo](https://colab.research.google.com/drive/1bhVV8DX9ojp_3rq47KhCs-5Ez9fRA4kh?usp=sharing).**
+* **Youtube Video Link: [PyFlow Video Demo](https://youtu.be/61sq-Wcy0to)**
 
 >[!TIP]
 > **Click Badge to Open in Collab**
@@ -91,7 +91,12 @@ Following these steps will allow you to run the PyFlow notebook successfully.
 2.  **Run Setup Cells:**
 * Run **Cell 1 (🛠️ Environment Setup: Installing Dependencies for PyFlow)** to install dependencies (takes 1-2 minutes).
 * Run **Cell 2 (🔑 Configuration & Authentication: Connecting to GCP and Ethereum RPC)**. You will be prompted to authenticate with your Google Account via a pop-up. Follow the instructions. Verify that the output shows successful connections (RPC).
-3.  **Run Analysis Cells:** Proceed through the notebook section by section (1.1 through 1.11).
+* Run **Cell 3 (1.1 🎯 Analysis Targets & Utility Functions)**. Set Valid Transaction Hash & Block Number.
+
+>[!NOTE]  
+> #### After setting up Cells 1–3, go to `Runtime`> `Run All` to run all analysis cells.
+
+3.  **Run Analysis Cells:** Proceed through the notebook section by section (1.2 through 1.11).
 *  **Modify Targets:** In Cell 1.1, you can change the default `TARGET_TX_HASH` and `TARGET_BLOCK_IDENTIFIER`.
 *  **Enable Expensive Calls:** Some cells (like `structLog`, `replay*`) have flags (`RUN_... = True/False`). Set them to `True` cautiously to run those analyses.
 *  **Use Interactive Widgets:** Some sections provide interactive widgets (dropdowns, text boxes, buttons) for filtering or changing inputs directly in the output.
